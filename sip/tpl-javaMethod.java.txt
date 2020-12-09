@@ -1,0 +1,4 @@
+	public $static $jret $name($params) {
+		$return $overloadName($args);
+	}
+

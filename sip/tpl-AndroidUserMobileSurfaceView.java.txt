@@ -1,0 +1,20 @@
+package $package;
+
+// Auto-generated file
+
+import android.content.Context;
+
+public class AndroidUserMobileSurfaceView extends AndroidMobileSurfaceView {
+$native_methods
+
+	public AndroidUserMobileSurfaceView(Context context) {
+		super(context);
+	}
+
+	public AndroidUserMobileSurfaceView(Context context, AndroidMobileSurfaceView.Callback svcb, int guiSurfaceId, long savedSurfacePointer) {
+		super(context, svcb, guiSurfaceId, savedSurfacePointer);
+	}
+
+$methods
+}
+

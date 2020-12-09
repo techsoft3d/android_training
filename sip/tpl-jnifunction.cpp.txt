@@ -1,0 +1,7 @@
+static $jret $overloadName(JNIEnv *env, jclass cobj, jlong ptr$params)
+{
+	$header
+	$rtemp((UserMobileSurface*)ptr)->$name($args);
+	$return
+}
+

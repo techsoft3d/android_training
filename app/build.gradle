@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 28
+
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def ndkABIs = properties.getProperty('ndk.abis') ? properties.getProperty('ndk.abis').split(',') : ['armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64']
+    ArrayList ndkArgs = properties.getProperty('ndk.arguments') ? properties.getProperty('ndk.arguments').split(',') : ["-DUMMY_VAR=0"] // ndk-build does not let you submit 0 args so pass in a dummy one if none are specified
+
+    println "ndkABIs: ${ndkABIs}"
+    println "ndkArgs: ${ndkArgs}"
+
+    ndkArgs.add('-DANDROID_STL=c++_shared')
+    ndkVersion '18.1.5063045'
+
+    defaultConfig {
+        applicationId "com.techsoft3d.hps.virtual_training"
+        minSdkVersion 14
+        targetSdkVersion 28
+        ndk {
+            abiFilters(*ndkABIs)
+        }
+        externalNativeBuild {
+            cmake {
+                version "3.10.2"
+                arguments(*ndkArgs)
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            version "3.10.2"
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+
+    packagingOptions {
+        pickFirst "**/libhps_*.so"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

@@ -1,0 +1,10 @@
+package $package;
+
+// Auto-generated file
+
+public class $className {
+$native_methods
+
+$methods
+}
+

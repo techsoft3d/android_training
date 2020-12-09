@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/userCode1Button"
+        android:onClick="toolbarButtonPressed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/_1" />
+
+    <Button
+        android:id="@+id/userCode2Button"
+        android:onClick="toolbarButtonPressed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/userCode1Button"
+        android:text="@string/_2" />
+
+    <Button
+        android:id="@+id/userCode3Button"
+        android:onClick="toolbarButtonPressed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/userCode2Button"
+        android:text="@string/_3" />
+
+    <Button
+        android:id="@+id/userCode4Button"
+        android:onClick="toolbarButtonPressed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/userCode3Button"
+        android:text="@string/_4" />
+
+</RelativeLayout>

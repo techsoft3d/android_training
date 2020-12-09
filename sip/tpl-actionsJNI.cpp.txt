@@ -1,0 +1,40 @@
+
+// Auto-generated file
+
+#include "$include_file"
+
+#include <jni.h>
+#include <android/log.h>
+#include <stdio.h>
+
+#include "jpaths.h"
+
+#define  JNI_LOG_TAG    "$className"
+#define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,JNI_LOG_TAG,__VA_ARGS__)
+#define  LOGE(...)  __android_log_print(ANDROID_LOG_ERROR,JNI_LOG_TAG,__VA_ARGS__)
+
+#include "JNIHelpers.h"
+
+$functions
+
+bool register${className}Natives(JNIEnv *env)
+{
+	jclass k = env->FindClass($jpath_define);
+	if (k == NULL) {
+		LOGE("Error loading class %s", $jpath_define);
+		return false;
+	}
+
+	JNINativeMethod	methods[] = {
+$methods
+	};
+	const size_t	count = sizeof(methods) / sizeof(methods[0]);
+
+	if (env->RegisterNatives(k, methods, count) != JNI_OK) {
+		LOGE("Error calling RegisterNatives");
+		return false;
+	}
+
+	return true;
+}
+

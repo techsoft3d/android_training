@@ -1,0 +1,7 @@
+static $jret $overloadName(JNIEnv *env, jclass cobj$params)
+{
+	$header
+	${rtemp}MobileApp::inst().$name($args);
+	$return
+}
+
