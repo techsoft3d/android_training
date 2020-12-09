@@ -4,6 +4,11 @@ This sample Android Project contains simple functional examples that demonstrate
 
 ## Training Recording
 [![HOOPS Training - Android](http://img.youtube.com/vi/FAxJRnXsXX0/1.jpg)](https://youtu.be/FAxJRnXsXX0 "HOOPS Training - Android")
+    <iframe width="560" height="315"
+src="https://youtu.be/FAxJRnXsXX0U" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 These examples assume basic knowledge and familiarity with Android Studio, developing Android Applications, and writing Native Code (C++ in our case). The below resources are a good jumping off point if you are new to this.
  - [Create your first Android Project](https://developer.android.com/training/basics/firstapp/creating-project)
