@@ -15,7 +15,7 @@ These examples assume basic knowledge and familiarity with Android Studio, devel
   - Native Development Kit (NDK) * using v18.1 which requires manual install.
   - CMAKE 3.10.2
 - HOOPS Visualize for Android
-  - Request and evaluation from [www.techsoft3d](www.techsoft3d.com]
+  - Request and evaluation from [www.techsoft3d](www.techsoft3d.com)
   - Download package from [developer.techsoft3d.com](developer.techsoft3d.com)-> HOOPS Products -> HPS API -> Mobile -> Android
   - On your system, set HPS_VISUALIZE_INSTALL_DIR to the extracted download location containing /bin, /include, etc.
   - If you are integrating HOOPS Exchange as well. Download it from Developer Zone and set the environment variable HEXCHANGE_INSTALL_DIR respectively as well.
