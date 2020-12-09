@@ -2,6 +2,9 @@
 
 This sample Android Project contains simple functional examples that demonstrate HOOPS Native SDKs interoperating with Android Applications. This is achieved through the Java Native Interface which allows Android Java code to invoke Native Library Methods.
 
+## Training Recording
+[![HOOPS Training - Android](http://img.youtube.com/vi/FAxJRnXsXX0/1.jpg)](https://youtu.be/FAxJRnXsXX0 "HOOPS Training - Android")
+
 These examples assume basic knowledge and familiarity with Android Studio, developing Android Applications, and writing Native Code (C++ in our case). The below resources are a good jumping off point if you are new to this.
  - [Create your first Android Project](https://developer.android.com/training/basics/firstapp/creating-project)
  - [What is HOOPS Native Platform?](https://docs.techsoft3d.com/hps/latest/build/general/technical_overview.html)
@@ -11,7 +14,9 @@ These examples assume basic knowledge and familiarity with Android Studio, devel
 - Android Studio (Built on 4.1.1 w/ Gradle 6.5)
   - Native Development Kit (NDK) * using v18.1 which requires manual install.
   - CMAKE 3.10.2
-- [HOOPS Visualize 2020 SP2 for Android](developer.techsoft3d.com)-> HOOPS Products -> HPS API -> Mobile -> Android
+- HOOPS Visualize for Android
+  - Request and evaluation from [www.techsoft3d](www.techsoft3d.com]
+  - Download package from [developer.techsoft3d.com](developer.techsoft3d.com)-> HOOPS Products -> HPS API -> Mobile -> Android
   - On your system, set HPS_VISUALIZE_INSTALL_DIR to the extracted download location containing /bin, /include, etc.
   - If you are integrating HOOPS Exchange as well. Download it from Developer Zone and set the environment variable HEXCHANGE_INSTALL_DIR respectively as well.
 
